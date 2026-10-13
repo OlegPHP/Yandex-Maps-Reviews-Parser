@@ -35,7 +35,7 @@ class GetCompanyController extends Controller
             return redirect()->route('company.show', ['id' => $id]);
             } catch (YandexHttpException $e) {
             Log::channel('yandex')->error('Ошибка при получении данных Яндекс Карт', [
-                'id' => $id,// а тут нужно ли добавить  ?? null(вероятно нет, ведь наш запрос идет уже после извлчения id)
+                'id' => $id,
                 'exception' => $e,
             ]);
             return response()->view('errors.yandex', [

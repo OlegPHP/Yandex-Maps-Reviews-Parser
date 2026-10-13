@@ -31,7 +31,7 @@ class YandexMapsParser
             throw new YandexDataException("Ошибка структуры данных на странице");
         }
 
-        //тоже бы обработать ошибки отсутствия ключей
+
         $countPage = $data['stack'][0]['results']['items'][0]['reviewResults']['params']['totalPages'];
         $name = $data['stack'][0]['meta']['breadcrumbs'][3]['name'];
         $category = $data['stack'][0]['meta']['breadcrumbs'][2]['name'];
